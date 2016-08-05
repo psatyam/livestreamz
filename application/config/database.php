@@ -48,11 +48,11 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = 'nettech';
-$db['default']['database'] = 'db_lisojo';
-$db['default']['dbdriver'] = 'mysql';
+$db['default']['hostname'] = 'ec2-23-21-100-145.compute-1.amazonaws.com';
+$db['default']['username'] = 'hrqsihpepivvdn';
+$db['default']['password'] = '476SIMoY9-nb3OisWnL4VSrdeK';
+$db['default']['database'] = 'd30rj9v8b2ejpp';
+$db['default']['dbdriver'] = 'postgre';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
 $db['default']['db_debug'] = TRUE;
