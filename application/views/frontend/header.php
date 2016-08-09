@@ -71,8 +71,10 @@
                             <?php if($user['logged_in']!=1){?>
                             <li><a href="<?php echo site_url()?>/user/login">Login</a></li>
                             <?php }elseif($user['login_type']!="facebook"){?>
+                            <li><a href="<?php echo site_url()?>/content/account">My Account</a></li>
                             <li><a href="<?php echo site_url()?>/user/signout">Logout</a></li>
                             <?php }else{?>
+                            <li><a href="<?php echo site_url()?>/content/account">My Account</a></li>
                             <li><a href="<?php echo site_url()?>/user/facebooklogout">Logout</a></li>
                             <?php }?>
                         </ul>
