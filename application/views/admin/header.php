@@ -14,10 +14,12 @@
         <link href="<?php echo base_url()?>admin_assets/vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
         <link href="<?php echo base_url()?>admin_assets/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
         <link href="<?php echo base_url()?>admin_assets/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <!-- CSS -->
         <link href="<?php echo base_url()?>admin_assets/css/app_1.min.css" rel="stylesheet">
         <link href="<?php echo base_url()?>admin_assets/css/app_2.min.css" rel="stylesheet">
+        <script src="<?php echo base_url()?>admin_assets/vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="<?php echo base_url()?>admin_assets/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     </head>
 

@@ -9,7 +9,7 @@
         days: 'Days'
     }, 
     function () {
-        alert('Done!');
+//        alert('Done!');
     });
     
     // MixItUp JS

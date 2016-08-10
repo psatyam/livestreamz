@@ -1,4 +1,4 @@
-
+<section id="main">
 <aside id="sidebar" class="sidebar c-overflow">
     <div class="s-profile">
         <a href="#" data-ma-action="profile-menu-toggle">
@@ -74,5 +74,7 @@
                 <li><a href="#">Manage</a></li>
             </ul>
         </li>        
+        <li><a href="<?php echo site_url() ?>/sector"><i class="zmdi zmdi-format-underlined"></i> Sector</a></li>
+               
     </ul>
 </aside>

@@ -22,11 +22,12 @@
     </footer> 
    
     <!-- jQuery -->
-    <script type="text/javascript" src="../../../code.jquery.com/jquery-1.12.3.min.js"></script>
+<!--    <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery-1.12.3.min.js"></script>-->
     <script type="text/javascript" src="<?php echo base_url();?>assets/vendors/flexslider/jquery.flexslider-min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assetsjs/jquery.countdown.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>assetsjs/bootstrap-switch.min.js"></script>
-    <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery.countdown.min.js"></script>
+<!--    <script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap-datetimepicker.js"></script>-->
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap-switch.min.js"></script>
+<!--    <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>-->
     <script src="<?php echo base_url();?>assets/js/owl.carousel.min.js"></script> 
     
     <!-- LightBox -->

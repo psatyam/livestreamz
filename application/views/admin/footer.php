@@ -1,3 +1,4 @@
+</section>
 <footer id="footer">
             Copyright &copy; 2015 Material Admin
 
@@ -23,8 +24,8 @@
 
 
         <!-- Javascript Libraries -->
-        <script src="<?php echo base_url()?>admin_assets/vendors/bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="<?php echo base_url()?>admin_assets/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!--<script src="<?php echo base_url()?>admin_assets/vendors/bower_components/jquery/dist/jquery.min.js"></script>-->
+        <!--<script src="<?php echo base_url()?>admin_assets/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
 
         <script src="<?php echo base_url()?>admin_assets/vendors/bower_components/flot/jquery.flot.js"></script>
         <script src="<?php echo base_url()?>admin_assets/vendors/bower_components/flot/jquery.flot.resize.js"></script>

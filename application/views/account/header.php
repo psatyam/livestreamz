@@ -28,6 +28,11 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendors/flexslider/flexslider.css"> 
     <!-- style.css-->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery-1.12.3.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js/moment.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap-datetimepicker.js"></script>
+    <!--<script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap-datetimepicker.min.js"></script>-->
     
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
