@@ -14,7 +14,7 @@ class Skill_model extends CI_Model {
     
     public function fetch() {
         
-        $sql = "SELECT a.*,b.txt_sector_name FROM " . $this->table . " AS a LEFT JOIN tab_sectors ON a.int_sector_id = b.int_sector_id";
+        $sql = "SELECT a.*,b.txt_sector_name FROM " . $this->table . " AS a LEFT JOIN tab_sectors AS b ON a.int_sector_id = b.int_sector_id";
         $query = $this->db->query($sql);
         return $query->result_array();
     }

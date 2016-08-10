@@ -16,7 +16,7 @@ class Skill extends CI_Controller {
     }
 
     public function index() {
-        $data["page"] = "sectorGrid";
+        $data["page"] = "skillGrid";
         $data["data"] = $this->skill_model->fetch();
         $data["sectors"] = $this->sector_model->fetch();
         $this->load->view('admin/page', $data);

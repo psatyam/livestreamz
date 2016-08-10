@@ -37,14 +37,15 @@
         <li class="active">
             <a href="index-2.html"><i class="zmdi zmdi-home"></i> Home</a>
         </li>
-        <li class="sub-menu">
+        <li><a href="<?php echo site_url() ?>/skill"><i class="zmdi zmdi-format-underlined"></i> Skills</a></li>
+<!--        <li class="sub-menu">
             <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-view-compact"></i> Skills</a>
 
             <ul>
                 <li><a href="#">Add</a></li>
                 <li><a href="#">Manage</a></li>
             </ul>
-        </li>
+        </li>-->
         <li class="sub-menu">
             <a href="#" data-ma-action="submenu-toggle"><i class="zmdi zmdi-widgets"></i> Events</a>
             <ul>
