@@ -20,7 +20,23 @@ class Events_model extends CI_Model {
     }
 
     public function getEventsByUserId($userId) {
-        $sql = "SELECT a.*,b.txt_name,c.txt_name AS user_name FROM " . $this->table . " AS a LEFT JOIN tab_organizations AS b ON a.int_organization_id = b.int_organization_id LEFT JOIN tab_users AS c ON a.int_added_by = c.int_user_id WHERE int_added_by = $userId ORDER BY ts_datetime ASC";
+        $sql = "SELECT a.*,c.txt_name AS user_name FROM " . $this->table . " AS a LEFT JOIN tab_users AS c ON a.int_added_by = c.int_user_id WHERE a.int_added_by = $userId ORDER BY a.ts_datetime ASC";
+        $query = $this->db->query($sql);
+        $result = $query->result_array();
+        return $result;
+    }
+
+    public function getEvents($limit = NULL) {
+        $sql = "SELECT a.*,c.txt_name AS user_name FROM " . $this->table . " AS a LEFT JOIN tab_users AS c ON a.int_added_by = c.int_user_id ORDER BY a.ts_datetime ASC";
+        if ($limit != NULL)
+            $sql.=" LIMIT $limit";
+        $query = $this->db->query($sql);
+        $result = $query->result_array();
+        return $result;
+    }
+
+    public function getEventsById($Id) {
+        $sql = "SELECT a.*,c.txt_name AS user_name FROM " . $this->table . " AS a LEFT JOIN tab_users AS c ON a.int_added_by = c.int_user_id WHERE int_event_id = $Id ";
         $query = $this->db->query($sql);
         $result = $query->result_array();
         return $result;

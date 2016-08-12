@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Dawat</title>
+    <title>LiveStreamz</title>
      
     <!-- Bootstrap -->
     <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -41,7 +41,11 @@
 </head>
 
 <body> 
-    <header class="row page_top">
+    <?php if(isset($banner)){ ?>
+    <header class="row page_top" style="background-image: url(<?php echo $banner?>)">
+        <?php }else{?>
+    <header class="row page_top" >
+        <?php } ?>
     <div class="container">
         <div class="row">
             <nav class="navbar menu_part">
@@ -53,7 +57,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                <a class="navbar-brand" href="#"><img src="images/header/logo.png" alt="#"></a>
+                <!--<a class="navbar-brand" href="#"><img src="images/header/logo.png" alt="#"></a>-->
+                <a class="navbar-brand" href="#"><h2>LiveStreamz</h2></a>
                 </div>
 
                 <!-- Menu -->
@@ -87,7 +92,7 @@
                 </div><!-- /.navbar-collapse -->
             </nav>
         </div>
-        <div class="page_title">
+        <div class="page_title" >
             <h2><?php echo $heading ?></h2>
             <!--<h4>So get ready to attend this awesome event &amp; book your seat now!  </h4>-->
         </div>
