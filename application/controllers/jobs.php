@@ -2,7 +2,7 @@
 
 (defined('BASEPATH')) OR exit('No direct script access allowed');
 
-require './phpMailer/PHPMailerAutoload.php';
+//require './phpMailer/PHPMailerAutoload.php';
 
 class Jobs extends CI_Controller {
 
@@ -98,61 +98,7 @@ class Jobs extends CI_Controller {
         redirect('jobs', 'refresh');
     }
 
-    public function sendInvite() {
-        $this->load->model('events_model');
-        $formdata = $this->input->post();
-        $status_array = $this->events_model->getEventsById($formdata['int_event_id']);
-        $html = "<table> "
-                . "<tr><td>Hi<td>"
-                . "</tr><tr><td>"
-                . "<p>You have been invited to join the event <b>" . $status_array[0]['txt_event_name'] . "</b> created by <b>" . $status_array[0]['user_name'] . "</b></p>"
-                . "<a href='" . site_url() . "/content/event/" . $formdata['int_event_id'] . "'>click here</a> to join or reject the event"
-                . "</td></tr>"
-                . "</table>";
-        $mail = new PHPMailer;
-
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
-//        $mail->isSMTP();                                      // Set mailer to use SMTP
-//        $mail->Host = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
-//        $mail->SMTPAuth = true;                               // Enable SMTP authentication
-//        $mail->Username = 'user@example.com';                 // SMTP username
-//        $mail->Password = 'secret';                           // SMTP password
-//        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-//        $mail->Port = 587;                                    // TCP port to connect to
-
-        $mail->setFrom('gr19490@gmail.com', 'Mailer');
-        foreach ($formdata['emails'] as $email) {
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-                $mail->addAddress('joe@example.net');     // Add a recipient
-            }
-        }
-//        $mail->addAddress('ellen@example.com');               // Name is optional
-//        $mail->addReplyTo('info@example.com', 'Information');
-//        $mail->addCC('cc@example.com');
-//        $mail->addBCC('bcc@example.com');
-//        $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-//        $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-        $mail->isHTML(true);                                  // Set email format to HTML
-
-        $mail->Subject = 'Envitation To Join Event';
-        $mail->Body = $html;
-        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-        if (!$mail->send()) {
-            $msg = 'Message could not be sent.  Mailer Error: ' . $mail->ErrorInfo;
-            $this->session->set_userdata('emailMsg', $msg);
-//            echo 'Message could not be sent.';
-//            echo 'Mailer Error: ' . $mail->ErrorInfo;
-        } else {
-            $msg = 'Message has been sent';
-            $this->session->set_userdata('emailMsg', $msg);
-//            echo 'Message has been sent';
-        }
-
-        redirect('content/accountEvents', 'refresh');
-//        print_r($html);
-//        exit;
-    }
+   
 
    
 }
