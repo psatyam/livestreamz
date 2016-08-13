@@ -16,6 +16,7 @@
     <link href="<?php echo base_url();?>assets/css/font-awesome.min.css" rel="stylesheet"> 
     <!-- Countdown -->
     <link href="<?php echo base_url();?>assets/css/jquery.countdown.css" rel="stylesheet"> 
+    <link href="<?php echo base_url();?>assets/css/datepicker3.css" rel="stylesheet"> 
     <link href="<?php echo base_url();?>assets/css/bootstrap-switch.min.css" rel="stylesheet"> 
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -32,6 +33,7 @@
     <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/moment.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap-datepicker.js"></script>
     <!--<script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap-datetimepicker.min.js"></script>-->
     
     <!--[if lt IE 9]>

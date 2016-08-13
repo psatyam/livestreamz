@@ -36,7 +36,7 @@ include("header.php");
                             <li><a href="#">Dashboard</a></li>
                             <li><a href="<?php echo site_url() ?>/content/accountOrg">Organization</a></li>
                             <li><a href="<?php echo site_url() ?>/content/accountEvents">Events</a></li>
-                            <li><a href="#">Jobs</a></li>
+                            <li><a href="<?php echo site_url() ?>/jobs">Jobs</a></li>
                             <li><a href="<?php echo site_url() ?>/content/accountAnnouncements">Announcement</a></li>
                         </ul>
                         <!--                        <div class="buton">
