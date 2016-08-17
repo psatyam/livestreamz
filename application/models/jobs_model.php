@@ -52,5 +52,15 @@ class Jobs_model extends CI_Model {
         $result = $query->result_array();
         return $result;
     }
+    
+    public function getJobsByQuery($param) {
+        $sql = "SELECT a.*,b.txt_name AS org_name,c.txt_name AS user_name FROM " . $this->table . " AS a ";
+        $sql.="LEFT JOIN tab_organizations AS b ON a.int_organization_id=b.int_organization_id ";
+        $sql.="LEFT JOIN tab_users AS c ON a.int_user_id = c.int_user_id ";
+        $sql.="WHERE a.txt_title ILIKE '%$param%' OR a.txt_skills ILIKE '%$param%' ORDER BY a.dt_expire ASC";
+        $query = $this->db->query($sql);
+        $result = $query->result_array();
+        return $result;
+    }
 
 }

@@ -1,4 +1,70 @@
-<?php // print_r($announcements);exit; ?>
+<?php // print_r($announcements);exit;   ?>
+<section class="row newsletter">
+    <div class="container">
+        <div class="row content">
+            <h2>Search For <span>Jobs</span></h2>
+            <form class="form-inline" method="get" action="<?php echo site_url() ?>/content/home">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="exampleInputAmount" name="job_query" placeholder="Search Query" value="<?php isset($_GET['job_query']) ? $_GET['job_query'] : '' ?>">
+                    <input type="submit" class="sub_btn" value="Search">
+                </div>
+            </form>
+        </div>
+    </div>
+</section> 
+<?php if (isset($jobs) && !empty($jobs)) { ?>
+    <section class="row blogs" >
+        <div class="container">
+            <div class="sec_header_left">
+                <h2>Matched Jobs</h2>
+                <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod to end.</p>-->
+            </div>
+            <div class="row blogs_inner">
+                <?php
+//                echo '<pre>';
+//                print_r($jobs);exit;
+                foreach ($jobs as $job) {
+                    ?>
+
+
+                    <div class="blog_item" style="padding-bottom: 26px;">
+                        <!--                <div class="item_image item_image_right">
+                                            <img src="http://placehold.it/370x272" alt="#">
+                                            <div class="item_icon item_icon_right">
+                                                <a href="#"><i class="fa fa-file-video-o"></i></a>
+                                            </div>
+                                            
+                                        </div>-->
+                        <div class="item_describe item_describe_right">
+                            <div class="media">
+                                <!--                                <div class="media-left">
+                                                                    <a href="#">
+                                                                        <img class="media-object" src="<?php echo isset($job['txt_profile_image']) && $job['txt_profile_image'] != '' ? base_url() . $job['txt_profile_image'] : base_url() . 'uploads/no-image.png' ?>" alt="#">
+                                                                                                        <div class="blog_time">
+                                                                                                            <h2>10</h2>
+                                                                                                            <h4>Nov</h4>
+                                                                                                        </div>
+                                                                    </a>
+                                                                </div>-->
+                                <div class="media-body">
+                                    <a href="<?php echo site_url() ?>/jobs/job/<?php echo $job['int_job_id'] ?>" class="media-heading"><?php echo $job['txt_title'] ?></a>
+                                    <ul class="nav">
+                                        <li><a href="#" title="Recruiter Name"><i class="fa fa-user"></i><span><?php echo $job['user_name'] ?> (Founder, <?php echo $job['org_name'] ?>)</span></a></li>
+                                        <li><a href="#" title="Job Location"><i class="fa fa-map-marker"></i><span><?php echo $job['txt_location'] ?></span></a></li>
+                                        <li><a href="#" title="Job Expiry"><i class="fa fa-clock-o"></i><span><?php echo $job['dt_expire'] ?></span></a></li>
+                                        <li><a href="#" title="Vacancy"><i class="fa fa-users"></i><span><?php echo $job['int_opening_counts'] ?></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+        <!--                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore to magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate. </p>
+                            <a href="blog_post.html">read more<i class="fa fa-long-arrow-right"></i></a>-->
+                        </div>
+                    </div>
+    <?php } ?>
+            </div>
+        </div>
+    </section>
+<?php } ?>
 <section class="row speakers">
     <div class="container">
         <div class="row sec_header_left">
@@ -9,42 +75,42 @@
             <!-- Place somewhere in the <body> of your page -->
             <div id="slider" class="flexslider">
                 <ul class="slides">
-                    <?php foreach ($events as $event) { ?>
+<?php foreach ($events as $event) { ?>
                         <li>
-                            
-                            <img src="<?php echo isset($event['txt_event_image'])?$event['txt_event_image']:'http://placehold.it/584x454'  ?>" alt="#" width="584" height="454">
+
+                            <img src="<?php echo isset($event['txt_event_image']) ? $event['txt_event_image'] : 'http://placehold.it/584x454' ?>" alt="#" width="584" height="454">
                             <div class="speakers_right">
-                                <h4><a href="<?php echo site_url() ?>/content/event/<?php echo $event['int_event_id']?>"><?php echo $event['txt_event_name']; ?></a></h4>
+                                <h4><a href="<?php echo site_url() ?>/content/event/<?php echo $event['int_event_id'] ?>"><?php echo $event['txt_event_name']; ?></a></h4>
                                 <h6><i class="fa fa-user"></i><?php echo $event['user_name'] ?></h6>
                                 <p><?php echo $event['txt_event_desc']; ?></p>
                                 <!--<h5><i class="fa fa-list"></i> Will Speak in Following Events:</h5>-->
                                 <ul class="nav following_events">
                                     <li><h6 class="pull-left"><i class="fa fa-map-marker"></i><?php echo $event['txt_venue'] ?></h6></li>
                                     <li><h6 class="pull-right"><i class="fa fa-clock-o"></i><?php echo $event['ts_datetime'] ?></h6></li>
-<!--                                    <li><a href="schedule.html"><span>3</span>Use font awesome icons or your own image</a></li>
+    <!--                                    <li><a href="schedule.html"><span>3</span>Use font awesome icons or your own image</a></li>
                                     <li><a href="schedule.html"><span>4</span>Easily specify the icon color, circle color</a></li>-->
                                 </ul>
-<!--                                <ul class="nav followers">
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>-->
+                                <!--                                <ul class="nav followers">
+                                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                                </ul>-->
                             </div>
                         </li>
-                    <?php } ?>
-                    
+<?php } ?>
+
                     <!-- items mirrored twice, total of 12 -->
                 </ul>
             </div>
             <div id="carousel-2" class="flexslider">
                 <ul class="slides">
-                    <?php foreach ($events as $event) { ?>
-                    <li>
-                        <img src="<?php echo isset($event['txt_event_image'])?$event['txt_event_image']:'http://placehold.it/140x140'  ?>" alt="<?php $event['txt_event_name']; ?>" width="140" height="240">
-                    </li>
-                    <?php } ?>
+<?php foreach ($events as $event) { ?>
+                        <li>
+                            <img src="<?php echo isset($event['txt_event_image']) ? $event['txt_event_image'] : 'http://placehold.it/140x140' ?>" alt="<?php $event['txt_event_name']; ?>" width="140" height="240">
+                        </li>
+<?php } ?>
                     <!-- items mirrored twice, total of 12 -->
                 </ul> 
                 <div class="custom-navigation">
@@ -55,6 +121,7 @@
         </div>
     </div>
 </section>
+
 <section class="row speakers">
     <div class="container">
         <div class="row sec_header_left">
@@ -65,42 +132,42 @@
             <!-- Place somewhere in the <body> of your page -->
             <div id="slider1" class="flexslider">
                 <ul class="slides">
-                    <?php foreach ($announcements as $announcement) { ?>
+<?php foreach ($announcements as $announcement) { ?>
                         <li>
-                            
-                            <img src="<?php echo isset($announcement['txt_announcement_image'])&&file_exists($announcement['txt_announcement_image'])?$announcement['txt_announcement_image']:'http://placehold.it/584x454'  ?>" alt="#" width="584" height="454">
+
+                            <img src="<?php echo isset($announcement['txt_announcement_image']) && file_exists($announcement['txt_announcement_image']) ? $announcement['txt_announcement_image'] : 'http://placehold.it/584x454' ?>" alt="#" width="584" height="454">
                             <div class="speakers_right">
                                 <h4><?php echo $announcement['txt_topic']; ?></h4>
                                 <h6><i class="fa fa-user"></i><?php echo $announcement['user_name'] ?></h6>
                                 <p><?php echo $announcement['txt_description']; ?></p>
                                 <!--<h5><i class="fa fa-list"></i> Will Speak in Following Events:</h5>-->
                                 <ul class="nav following_events">
-                                    <!--<li><h6 class="pull-left"><i class="fa fa-map-marker"></i><?php // echo $announcement['txt_venue'] ?></h6></li>-->
+                                    <!--<li><h6 class="pull-left"><i class="fa fa-map-marker"></i><?php // echo $announcement['txt_venue']   ?></h6></li>-->
                                     <li><h6 class="pull-right"><i class="fa fa-clock-o"></i><?php echo $announcement['ts_datetime'] ?></h6></li>
-<!--                                    <li><a href="schedule.html"><span>3</span>Use font awesome icons or your own image</a></li>
+    <!--                                    <li><a href="schedule.html"><span>3</span>Use font awesome icons or your own image</a></li>
                                     <li><a href="schedule.html"><span>4</span>Easily specify the icon color, circle color</a></li>-->
                                 </ul>
-<!--                                <ul class="nav followers">
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>-->
+                                <!--                                <ul class="nav followers">
+                                                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                                                </ul>-->
                             </div>
                         </li>
-                    <?php } ?>
-                    
+<?php } ?>
+
                     <!-- items mirrored twice, total of 12 -->
                 </ul>
             </div>
             <div id="carousel-2" class="flexslider">
                 <ul class="slides">
-                    <?php foreach ($announcements as $announcement) { ?>
-                    <li>
-                        <img src="<?php echo isset($announcement['txt_announcement_image'])&&file_exists($announcement['txt_announcement_image'])?$announcement['txt_announcement_image']:'http://placehold.it/140x140'  ?>" alt="<?php $announcement['txt_topic']; ?>" width="140" height="240">
-                    </li>
-                    <?php } ?>
+<?php foreach ($announcements as $announcement) { ?>
+                        <li>
+                            <img src="<?php echo isset($announcement['txt_announcement_image']) && file_exists($announcement['txt_announcement_image']) ? $announcement['txt_announcement_image'] : 'http://placehold.it/140x140' ?>" alt="<?php $announcement['txt_topic']; ?>" width="140" height="240">
+                        </li>
+<?php } ?>
                     <!-- items mirrored twice, total of 12 -->
                 </ul> 
                 <div class="custom-navigation">

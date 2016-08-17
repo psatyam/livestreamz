@@ -2,7 +2,7 @@
 
 (defined('BASEPATH')) OR exit('No direct script access allowed');
 
-//require './phpMailer/PHPMailerAutoload.php';
+require './phpMailer/PHPMailerAutoload.php';
 
 class Content extends CI_Controller {
 
@@ -15,6 +15,12 @@ class Content extends CI_Controller {
         $this->load->model('user_model');
         $this->load->model('events_model');
         $this->load->model('announcements_model');
+        $this->load->model('jobs_model');
+//        print_r($_GET);exit;
+        if (isset($_GET['job_query']) && $_GET['job_query'] != '')
+            $jobs = $this->jobs_model->getJobsByQuery($_GET['job_query']);
+        if (isset($jobs) && $jobs != NULL)
+            $data['jobs'] = $jobs;
         $data['events'] = $this->events_model->getEvents(10);
         $data['announcements'] = $this->announcements_model->getAnnouncements(10);
         $data['page_title'] = 'Home';
@@ -105,7 +111,7 @@ class Content extends CI_Controller {
                 $data['visiting_data'] = $visiting_data[0];
 
             $data['page_title'] = 'My Account | Events';
-            $data['banner']=$status_array[0]['txt_event_image'];
+            $data['banner'] = $status_array[0]['txt_event_image'];
             $data['heading'] = $status_array[0]['txt_event_name'];
             $data['page'] = 'events_detail';
             $data['sub_heading'] = '';
@@ -165,7 +171,7 @@ class Content extends CI_Controller {
                 . "<a href='" . site_url() . "/content/event/" . $formdata['int_event_id'] . "'>click here</a> to join or reject the event"
                 . "</td></tr>"
                 . "</table>";
-        //$mail = new PHPMailer;
+        $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 //        $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -176,25 +182,25 @@ class Content extends CI_Controller {
 //        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 //        $mail->Port = 587;                                    // TCP port to connect to
 
-        /*$mail->setFrom('gr19490@gmail.com', 'Mailer');
+        $mail->setFrom('gr19490@gmail.com', 'Mailer');
         foreach ($formdata['emails'] as $email) {
             if (!filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
                 $mail->addAddress('joe@example.net');     // Add a recipient
             }
-        }*/
+        }
 //        $mail->addAddress('ellen@example.com');               // Name is optional
 //        $mail->addReplyTo('info@example.com', 'Information');
 //        $mail->addCC('cc@example.com');
 //        $mail->addBCC('bcc@example.com');
 //        $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 //        $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-        //$mail->isHTML(true);                                  // Set email format to HTML
+        $mail->isHTML(true);                                  // Set email format to HTML
 
-        //$mail->Subject = 'Envitation To Join Event';
-       // $mail->Body = $html;
-       // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+        $mail->Subject = 'Envitation To Join Event';
+        $mail->Body = $html;
+        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-        /*if (!$mail->send()) {
+        if (!$mail->send()) {
             $msg = 'Message could not be sent.  Mailer Error: ' . $mail->ErrorInfo;
             $this->session->set_userdata('emailMsg', $msg);
 //            echo 'Message could not be sent.';
@@ -203,9 +209,7 @@ class Content extends CI_Controller {
             $msg = 'Message has been sent';
             $this->session->set_userdata('emailMsg', $msg);
 //            echo 'Message has been sent';
-        }*/
-		$msg = 'Message has been sent';
-        $this->session->set_userdata('emailMsg', $msg);
+        }
 
         redirect('content/accountEvents', 'refresh');
 //        print_r($html);
@@ -247,7 +251,7 @@ class Content extends CI_Controller {
         }
         redirect('content/accountAnnouncements', 'refresh');
     }
-    
+
     function announcement() {
         $announcementId = $this->uri->segment(3);
 //        print_r($this->user);exit;
@@ -260,7 +264,7 @@ class Content extends CI_Controller {
             $status_array = $this->announcements_model->getAnnouncementsById($announcementId);
             if ($status_array != NULL)
                 $data['announcement_details'] = $status_array[0];
-            $data['banner']=$status_array[0]['txt_announcement_image'];
+            $data['banner'] = $status_array[0]['txt_announcement_image'];
             $data['page_title'] = 'My Account | Announcements';
             $data['heading'] = $status_array[0]['txt_topic'];
             $data['page'] = 'announcements_detail';

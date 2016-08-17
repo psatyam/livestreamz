@@ -51,7 +51,8 @@
         </div>
     </div>
 </section>
-<section class="row blogs">
+<?php if($job_details['int_user_id'] == $user['int_user_id']){ ?>
+<section class="row blogs" >
     <div class="container">
         <div class="sec_header_left">
             <h2>All Applicants</h2>
@@ -103,6 +104,7 @@
         </div>
     </div>
 </section>
+<?php } ?>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
