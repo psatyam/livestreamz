@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from themexy.com/demo/LiveStreamz/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Aug 2016 12:35:51 GMT -->
+<!-- Mirrored from themexy.com/demo/LivStreamz/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Aug 2016 12:35:51 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>LiveStreamz</title>
+    <title>LivStreamz</title>
      
     <!-- Bootstrap -->
     <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <!--<a class="navbar-brand" href="#"><img src="images/header/logo.png" alt="#"></a>-->
-                        <a class="navbar-brand" href="#"><h2>LiveStreamz</h2></a>
+                        <a class="navbar-brand" href="#"><h2>LivStreamz</h2></a>
                     </div>
 
                     <!-- Menu -->
@@ -86,7 +86,7 @@
                 </nav>
                 <div class="row m0 count_down">
                     <h6>09 Nov, 2016</h6>
-                    <h2><span>LiveStreamz</span> Conferences <span>&amp;</span> events </h2>
+                    <h2><span>LivStreamz</span> Conferences <span>&amp;</span> events </h2>
                     <h4>So get ready to attend this awesome event &amp; book your seat now! </h4> 
                     <ul id="example">
                         <li><span class="days">00</span><p class="days_text">Days</p></li>
@@ -121,7 +121,7 @@
                             </div>
                             <div class="media-body">
                                 <h3 class="media-heading">Dhaka, BD</h3>
-                                <p>LiveStreamz Hall, Road # 00, Section # 11, Mirpur, Dhaka.</p>
+                                <p>LivStreamz Hall, Road # 00, Section # 11, Mirpur, Dhaka.</p>
                             </div>
                         </div>
                     </div>

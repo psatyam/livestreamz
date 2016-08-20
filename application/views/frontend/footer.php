@@ -1,7 +1,8 @@
     <footer>
         <div class="container">
             <div class="row footer_top">
-                <img src="images/header/logo_bottom.png" alt="#">
+                <h1 style="color: #e74c3c">LivStreamz</h1>
+                <!--<img src="images/header/logo_bottom.png" alt="#">-->
             </div>
             <div class="row footer_bottom">
                 <div class="left">
