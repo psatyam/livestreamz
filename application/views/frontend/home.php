@@ -123,7 +123,7 @@
 <?php foreach ($announcements as $announcement) { ?>
                         <li>
 
-                            <img src="<?php echo isset($announcement['txt_announcement_image']) && file_exists($announcement['txt_announcement_image']) ? $announcement['txt_announcement_image'] : 'http://placehold.it/584x454' ?>" alt="#" width="584" height="454">
+                            <img src="<?php echo isset($announcement['txt_announcement_image']) ? $announcement['txt_announcement_image'] : 'http://placehold.it/584x454' ?>" alt="#" width="584" height="454">
                             <div class="speakers_right">
                                 <h4><?php echo $announcement['txt_topic']; ?></h4>
                                 <h6><i class="fa fa-user"></i><?php echo $announcement['user_name'] ?></h6>
@@ -153,7 +153,7 @@
                 <ul class="slides">
 <?php foreach ($announcements as $announcement) { ?>
                         <li>
-                            <img src="<?php echo isset($announcement['txt_announcement_image']) && file_exists($announcement['txt_announcement_image']) ? $announcement['txt_announcement_image'] : 'http://placehold.it/140x140' ?>" alt="<?php $announcement['txt_topic']; ?>" width="140" height="240">
+                            <img src="<?php echo isset($announcement['txt_announcement_image']) ? $announcement['txt_announcement_image'] : 'http://placehold.it/140x140' ?>" alt="<?php $announcement['txt_topic']; ?>" width="140" height="240">
                         </li>
 <?php } ?>
                     <!-- items mirrored twice, total of 12 -->
