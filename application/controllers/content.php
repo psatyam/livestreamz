@@ -2,7 +2,7 @@
 
 (defined('BASEPATH')) OR exit('No direct script access allowed');
 
-require './phpMailer/PHPMailerAutoload.php';
+//require './phpMailer/PHPMailerAutoload.php';
 
 class Content extends CI_Controller {
 
