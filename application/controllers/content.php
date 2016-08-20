@@ -171,7 +171,7 @@ class Content extends CI_Controller {
                 . "<a href='" . site_url() . "/content/event/" . $formdata['int_event_id'] . "'>click here</a> to join or reject the event"
                 . "</td></tr>"
                 . "</table>";
-        $mail = new PHPMailer;
+        //$mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 //        $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -182,25 +182,25 @@ class Content extends CI_Controller {
 //        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 //        $mail->Port = 587;                                    // TCP port to connect to
 
-        $mail->setFrom('gr19490@gmail.com', 'Mailer');
+        /*$mail->setFrom('gr19490@gmail.com', 'Mailer');
         foreach ($formdata['emails'] as $email) {
             if (!filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
                 $mail->addAddress('joe@example.net');     // Add a recipient
             }
-        }
+        }*/
 //        $mail->addAddress('ellen@example.com');               // Name is optional
 //        $mail->addReplyTo('info@example.com', 'Information');
 //        $mail->addCC('cc@example.com');
 //        $mail->addBCC('bcc@example.com');
 //        $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 //        $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-        $mail->isHTML(true);                                  // Set email format to HTML
+        /*$mail->isHTML(true);                                  // Set email format to HTML
 
         $mail->Subject = 'Envitation To Join Event';
         $mail->Body = $html;
-        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';*/
 
-        if (!$mail->send()) {
+        /*if (!$mail->send()) {
             $msg = 'Message could not be sent.  Mailer Error: ' . $mail->ErrorInfo;
             $this->session->set_userdata('emailMsg', $msg);
 //            echo 'Message could not be sent.';
@@ -209,7 +209,9 @@ class Content extends CI_Controller {
             $msg = 'Message has been sent';
             $this->session->set_userdata('emailMsg', $msg);
 //            echo 'Message has been sent';
-        }
+        }*/
+		 $msg = 'Message has been sent';
+         $this->session->set_userdata('emailMsg', $msg);
 
         redirect('content/accountEvents', 'refresh');
 //        print_r($html);
