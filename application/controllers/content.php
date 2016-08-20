@@ -2,7 +2,7 @@
 
 (defined('BASEPATH')) OR exit('No direct script access allowed');
 
-//require './phpMailer/PHPMailerAutoload.php';
+require './phpMailer/PHPMailerAutoload.php';
 
 class Content extends CI_Controller {
 
@@ -171,8 +171,7 @@ class Content extends CI_Controller {
                 . "<a href='" . site_url() . "/content/event/" . $formdata['int_event_id'] . "'>click here</a> to join or reject the event"
                 . "</td></tr>"
                 . "</table>";
-/*   
-   $mail = new PHPMailer;
+        $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 //        $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -211,7 +210,7 @@ class Content extends CI_Controller {
             $this->session->set_userdata('emailMsg', $msg);
 //            echo 'Message has been sent';
         }
-*/
+
         redirect('content/accountEvents', 'refresh');
 //        print_r($html);
 //        exit;

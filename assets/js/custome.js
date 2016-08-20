@@ -43,6 +43,28 @@
             directionNav: false,
             sync: "#carousel"
         }); 
+        $('#carousel1').flexslider({
+            animation: "slide",
+            controlNav: false,
+            dot:false,
+            animationLoop: false,
+            slideshow: false,
+            itemWidth: 68,
+//            itemMargin: 5,
+            maxItems: 6,
+            asNavFor: '#slider1',
+            controlsContainer: $("#carousel1"), 
+            customDirectionNav: $(".custom-navigation a"),
+        });
+
+        $('#slider1').flexslider({
+            animation: "slide",
+            controlNav: false,
+            animationLoop: false,
+            slideshow: false,
+            directionNav: false,
+            sync: "#carousel1"
+        }); 
     });
     
     // Carousel-2

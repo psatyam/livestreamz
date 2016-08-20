@@ -1,17 +1,5 @@
 <?php // print_r($announcements);exit;   ?>
-<section class="row newsletter">
-    <div class="container">
-        <div class="row content">
-            <h2>Search For <span>Jobs</span></h2>
-            <form class="form-inline" method="get" action="<?php echo site_url() ?>/content/home">
-                <div class="input-group">
-                    <input type="text" class="form-control" id="exampleInputAmount" name="job_query" placeholder="Search Query" value="<?php isset($_GET['job_query']) ? $_GET['job_query'] : '' ?>">
-                    <input type="submit" class="sub_btn" value="Search">
-                </div>
-            </form>
-        </div>
-    </div>
-</section> 
+ 
 <?php if (isset($jobs) && !empty($jobs)) { ?>
     <section class="row blogs" >
         <div class="container">
@@ -69,7 +57,7 @@
     <div class="container">
         <div class="row sec_header_left">
             <h2>Recent Events</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod to end.</p>
+            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod to end.</p>-->
         </div>
         <div class="row slider_area speakers_slider_area pb0">
             <!-- Place somewhere in the <body> of your page -->
@@ -161,7 +149,7 @@
                     <!-- items mirrored twice, total of 12 -->
                 </ul>
             </div>
-            <div id="carousel-2" class="flexslider">
+            <div id="carousel1" class="flexslider">
                 <ul class="slides">
 <?php foreach ($announcements as $announcement) { ?>
                         <li>
@@ -183,7 +171,7 @@
 
 
 
-<section class="row event">
+<!--<section class="row event">
     <div class="container">
         <div class="row event_inside">
             <div class="col-md-8 event_left">
@@ -430,7 +418,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod to end.</p>
         </div>
         <div class="row slider_area">
-            <!-- Place somewhere in the <body> of your page -->
+             Place somewhere in the <body> of your page 
             <div id="slider" class="flexslider">
                 <ul class="slides">
                     <li>
@@ -697,7 +685,7 @@
                             </ul>
                         </div>
                     </li>
-                    <!-- items mirrored twice, total of 12 -->
+                     items mirrored twice, total of 12 
                 </ul>
             </div>
             <div id="carousel" class="flexslider speaker_car">
@@ -735,7 +723,7 @@
                     <li>
                         <img src="images/speakers/thumbnail/17.jpg" alt="#">
                     </li>
-                    <!-- items mirrored twice, total of 12 -->
+                     items mirrored twice, total of 12 
                 </ul> 
                 <div class="custom-navigation">
                     <a href="#flex-next" class="flex-prev"><i class="fa fa-angle-left"></i></a>
@@ -750,7 +738,7 @@
     <div class="container">
         <div class="row comment_box">
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <!-- Wrapper for slides -->
+                 Wrapper for slides 
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
                         <div class="total_items">
@@ -864,8 +852,8 @@
             </div>
         </div>
     </div>
-</section>
-
+</section>-->
+<!--
 <section class="row pricing">
     <div class="container">
         <div class="row ticket_pricing">
@@ -1132,7 +1120,7 @@
 </section>
 
 <section class="row g_map">
-    <!-- Map -->
+     Map 
     <div id="map"></div> 
 
     <div class="container">
@@ -1182,4 +1170,4 @@
             </ul>
         </div>
     </div>
-</section>
+</section>-->

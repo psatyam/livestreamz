@@ -98,7 +98,20 @@
                         <li class="minit"><span class="seconds">00</span><p class="seconds_text">Seconds</p></li>
                     </ul> 
                 </div>
-                <div class="row m0 event_info">
+                <section class="row newsletter">
+    <div class="container">
+        <div class="row content">
+            <h2>Search For <span>Jobs</span></h2>
+            <form class="form-inline" method="get" action="<?php echo site_url() ?>/content/home">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="exampleInputAmount" name="job_query" placeholder="Search Query" value="<?php isset($_GET['job_query']) ? $_GET['job_query'] : '' ?>">
+                    <input type="submit" class="sub_btn" value="Search">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!--                <div class="row m0 event_info">
                     <div class="col-md-4 event_info_describe">
                         <div class="media item">
                             <div class="media-left media-middle icon_side">
@@ -138,7 +151,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </header>
