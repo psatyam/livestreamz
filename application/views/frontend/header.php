@@ -29,7 +29,11 @@
     <!-- style.css-->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/flexslider.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/photoset-grid-master/css/main.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/photoset-grid-master/css/colorbox.css">
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/photoset-grid-master/jquery.photoset-grid.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/photoset-grid-master/js/jquery.colorbox.js"></script>
     
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>

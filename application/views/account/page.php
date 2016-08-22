@@ -38,6 +38,8 @@ include("header.php");
                             <li><a href="<?php echo site_url() ?>/content/accountEvents">Events</a></li>
                             <li><a href="<?php echo site_url() ?>/jobs">Jobs</a></li>
                             <li><a href="<?php echo site_url() ?>/content/accountAnnouncements">Announcement</a></li>
+                            <li><a href="<?php echo site_url() ?>/gallery">Gallery</a></li>
+                            <li><a href="<?php echo site_url() ?>/blogs">Blogs</a></li>
                         </ul>
                         <!--                        <div class="buton">
                                                     <a href="#">buy now!</a>

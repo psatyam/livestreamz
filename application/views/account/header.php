@@ -25,16 +25,22 @@
     
     <!-- Owl Carousel css -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/owl.carousel.css" type="text/css" media="screen"> 
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/dropzone.css" type="text/css" media="screen"> 
     <!-- Flexslider  -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendors/flexslider/flexslider.css"> 
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/Gallery-master/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/Bootstrap-Image-Gallery-master/css/colorbox.css">
     <!-- style.css-->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery-1.12.3.min.js"></script>
     <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/moment.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js/dropzone.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap-datetimepicker.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap-datepicker.js"></script>
     <!--<script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap-datetimepicker.min.js"></script>-->
+    <script type="text/javascript" src="<?php echo base_url();?>assets/Gallery-master/js/jquery.blueimp-gallery.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/Bootstrap-Image-Gallery-master/js/bootstrap-image-gallery.min.js"></script>
     
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>

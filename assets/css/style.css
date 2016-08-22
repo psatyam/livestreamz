@@ -1050,7 +1050,7 @@ h2, h3, h4, h5, h6 {
 }
 .blogs .blogs_inner .leave_comment form .form-group {
   width: 375px;
-  height: 50px;
+  /*height: 50px;*/
   margin-right: 18px;
 }
 @media (max-width: 1199px) {

@@ -14,8 +14,10 @@
 | path to your installation.
 |
 */
+
 $config['base_url']	= 'https://livstreamz.herokuapp.com';
 //$config['base_url']	= '';
+
 
 /*
 |--------------------------------------------------------------------------
