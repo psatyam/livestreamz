@@ -136,7 +136,7 @@ h2, h3, h4, h5, h6 {
   background: url("../images/header/mainbg.jpg") no-repeat scroll;
   background-size: cover;
   position: relative;
-  height: 964px;
+  /*height: 964px;*/
 }
 .main_page:before {
   content: '';
